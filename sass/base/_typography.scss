@@ -1,0 +1,114 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: $color-grey-dark;
+    line-height: 1.7;
+    
+}
+
+.heading-primary {
+
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 1.8rem;
+        animation: moveInLeft 1s ease-out;
+        margin-bottom: 2rem;
+
+        
+
+        }
+        
+    &--sec {
+        display: block;
+        margin-bottom: 3rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 1.2rem;
+        animation: moveInRight 1s ease-out;
+
+        &:last-child {
+            margin-bottom: 6rem;
+        }
+
+        @include respond (port-tab) {
+            font-size: .8rem;  
+            letter-spacing: .7rem;
+           }
+        }
+    
+    
+    
+    }
+
+    .heading-secondary {
+
+        &--main {
+            width: 100%;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: inline-block;
+            background-image: linear-gradient(to right, $color-secondary-green, $color-primary-green);
+            opacity: .85;
+            @include bgclip;
+            letter-spacing: .2rem;
+    
+            @include respond(port-tab) {
+                margin-top: 2rem;
+                font-size: 1.9rem;
+               }
+
+              
+        }
+        
+   
+        &--sec {
+            margin-top: 2rem;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: inline-block;
+            background-image: linear-gradient(to left, $color-primary-orange, darken($color-primary-orange, 10%));
+            opacity: .85;
+            @include bgclip;
+            letter-spacing: .2rem;
+    
+            @include respond(port-tab) {
+                
+                font-size: 1.9rem;
+               }
+        }  
+        &--ter {
+         font-size: $default-font-size;
+         font-weight: 700;
+         color: $color-white;
+         text-transform: uppercase;
+        }
+    }
+
+    
+
+    .paragraph {
+        font-size: $default-font-size;
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .composition {
+        &__container {
+            &__photo-desc {
+        font-size: 2rem;
+        letter-spacing: 2rem;
+        font-weight: 400;
+        text-align: center;
+        color: $color-white;
+            }
+        }
+    }

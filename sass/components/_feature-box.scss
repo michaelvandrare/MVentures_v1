@@ -1,0 +1,25 @@
+.feature-box {
+    background-color: rgba($color-white, .5);
+    padding: 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: all .2s ease-in-out;
+   
+   
+  &__icon {
+   font-size: 6rem;
+   margin-bottom: 1rem;
+  }
+
+  &__text {
+    
+    color: $color-white;
+    font-size: $default-font-size;
+  }
+
+  &:hover {
+    transform: translateY(-7%) scale(1.1);
+  }
+}
+

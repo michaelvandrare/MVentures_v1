@@ -1,0 +1,55 @@
+
+.composition {
+    position: relative;
+    &__container {
+    position: relative;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    border-radius: 3px;
+    z-index: 10;
+    transition: all, .2s ease-in-out;
+        
+    &:hover {
+            transform: scale(1.25) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .4);
+            z-index: 20;
+
+        .composition__container__photo-desc {
+                opacity: 1;
+                transition: all, .5s ease-in;
+            }
+          }
+
+    &__photo-desc {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            
+
+            @include respond(port-tab) {
+                opacity: 1;
+                font-size: 3rem;
+                font-weight: 300;
+            }
+            
+        }
+        &__photo {
+            width: 100%;
+            vertical-align: top;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+            border-radius: 3px;
+            z-index: 10;
+            transition: all, .2s ease-in-out;
+            
+    }
+    
+    
+      
+      
+
+    }
+    
+
+       
+}

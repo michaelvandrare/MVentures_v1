@@ -1,0 +1,163 @@
+.card {
+   perspective: 150rem;
+   -moz-perspective: 150rem;
+   position: relative;
+   height: 47rem;
+   scale: 90%;
+
+   &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 47rem;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: all .9s ease-in-out;
+    width: 100%;
+    backface-visibility: hidden;
+
+
+    &--front {
+        background-color: rgba($color-white, .5);
+        
+    }
+
+    &--back {       
+
+        transform: rotateY(-180deg);
+
+        &-1 {
+            background-image: linear-gradient(to right bottom, #6B441Cff, #463518ff, );
+        }
+        &-2 {
+            background-image: linear-gradient(to right bottom, $color-grass-light, $color-grass-dark);
+        }
+        &-3 {
+            background-image: linear-gradient(to right bottom, #3B5879ff, #464726ff);
+        }
+    }
+   }
+
+   &:hover &__side--front {
+    transform: rotateY(180deg);
+   }
+   &:hover &__side--back {
+    transform: rotateY(0deg);
+   }
+
+  &__picture {
+    
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+        background-image: linear-gradient(to right bottom, darken(#463518ff, 100%), darken(#6B441Cff, 100%)), url("../img/card-1.jpg");
+    }
+    &--2 {
+        background-image: linear-gradient(to right bottom, darken(#303222ff, 100%), darken(#797024ff, 20%)), url("../img/card-2.jpg");
+    }
+    &--3 {
+        background-image: linear-gradient(to right bottom, darken($color-blue-light, 100%), darken($color-blue-dark, 20%)), url("../img/card-3.jpg");
+    }
+
+    
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: 2.8rem;
+        font-weight: 300;
+        color: $color-white;
+        text-align: right;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+        
+  }
+
+  &__heading-span {
+    padding: 1rem 1rem;
+    margin: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    opacity: .9;
+    
+    
+    &--1 {
+        background-image: linear-gradient(to right bottom, $color-brown-light, $color-brown-dark);
+        
+    }
+    &--2 {
+        background-image: linear-gradient(to right bottom, $color-grass-light, $color-grass-dark)
+    }
+    &--3 {
+        background-image: linear-gradient(to right bottom, #92A9C6ff, #3B5879ff)
+    }
+    
+
+  }
+&__details {
+    padding: 3rem;
+    ul {
+        list-style: none;
+        width: 87%;
+        margin: 0 auto;
+    
+        li {
+        padding: 1rem;
+        font-size: 1.5rem;
+    
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-grey-dark;
+        }
+        }
+    }
+}
+
+
+&__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+   
+}
+&__desc-box {
+    
+    color: $color-white;
+    margin-bottom: 6rem;
+
+  } 
+
+&__desc {
+    font-size: 1rem;
+    font-style: italic;
+    border-bottom: 1px solid $color-grey-dark;
+    padding: 1rem;
+   }
+
+&__vacant {
+     font-size: 6rem;
+     font-weight: 100;
+   }
+
+&__tickets {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+}
+
+
+.fas {
+    color: $color-primary-orange;
+    float: left;
+    position: relative;
+    top: .5rem;
+}

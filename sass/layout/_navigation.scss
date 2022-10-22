@@ -1,0 +1,118 @@
+.navigation {
+
+    width: 100vw;
+    
+
+    &__checkbox {
+        display: none;
+    }
+
+
+
+    &__button {
+        
+        height: 3rem;
+        width: 3rem;
+        position: fixed;
+        top: 7.5rem;
+        right: 6rem;
+        background-image: url(../../img/menu.svg);
+        -webkit-filter: invert(100%); /* Safari/Chrome */
+        filter: invert(100%);
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            transform: scale(90%);
+        }
+
+        &:active {
+            transform: scale(80%);
+        }
+
+        @include respond (port-tab) {
+            top: 4.5rem;
+            right: 5rem;
+        }
+    }
+
+   
+    
+ &__nav {
+    
+    height: 100vh;
+   
+    top: 0;
+    left: 0;
+    width: 0;
+    position: fixed;
+    z-index: 1500;
+    opacity: 0;
+    transition: all .5s;
+    background-color: rgba($color-black, .95);
+
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        padding-left: .5rem;
+    }
+
+    &__item {
+       margin: 1rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            font-size: 3rem;
+            font-weight: 300;
+            color: $color-white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            text-align: center;
+            letter-spacing: .5rem;
+            text-transform: uppercase;
+            transition: all .2s ease-in-out;
+
+        }
+        &:hover,
+        &:active {
+          background-position: 100%;
+          color: $color-primary-orange;
+          
+          
+        }
+
+        
+    }
+
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+        transition: opacity .6s;
+    }
+
+    &__checkbox:not(:checked) ~ &__nav {  
+        visibility: hidden;
+        width: 100%;
+        transition: all .6s;
+    }
+
+    &__checkbox:checked ~ &__button {
+        background-image: url(../../img/close.svg);
+    }
+
+    
+}
+
+

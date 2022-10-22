@@ -1,0 +1,21 @@
+.footer {
+    background-image: linear-gradient(to top, lighten(rgba($color-primary-orange, .8), 20%), rgba($color-primary-orange, .5), transparent 98%);
+    font-size: 1.4rem;
+    color: rgba($color-white, .5);
+    padding: 8rem 0;
+    position: relative;
+
+    
+
+    &__logo {
+        @include absCenter;
+        position: absolute;
+        width: 10rem;
+        opacity: .8;
+    }
+
+    &__copyright {
+        position: relative;
+        top: 8rem;
+    }
+}

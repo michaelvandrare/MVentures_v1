@@ -1,0 +1,51 @@
+.section-destinations {
+   padding: 10rem 0;
+   background-image: linear-gradient(to right, $color-grey-light-1, darken($color-grey-light-1, 20%));
+
+}
+
+.section-features {
+   padding: 15rem 0;
+   background-image: linear-gradient(
+    to right, 
+    rgba($color-primary-green, .7),
+    rgba($color-primary-orange, .5)), 
+     url(../../img/Juta.jpg);
+   min-height: 90vh;
+   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   
+}
+
+.section-tours {
+   padding: 5rem 0;
+   background-image: linear-gradient(to right, $color-grey-light-1, darken($color-grey-light-1, 20%));
+}
+
+
+.section-book {
+   background-image: linear-gradient(to right, $color-primary-orange, lighten($color-primary-orange, 20%));
+   position: relative;
+}
+
+.book {
+   background-image: linear-gradient(
+      to right, 
+      rgba($color-grey-light-1, .7), 
+      darken(rgba($color-grey-light-1, .7), 20%));
+   
+   background-size: cover;
+   position: absolute;
+   z-index: 2;
+   width: 60vw;
+   height: 50rem;
+   @include absCenter;
+
+@include respond (port-tab) {
+   height: 60rem;
+}
+
+
+}

@@ -1,0 +1,37 @@
+@mixin clearfix {
+    &::after {
+        content:"";
+        display: table;
+        clear: both;
+    }
+    
+   
+}
+
+@mixin bgclip {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }
+    };
+
+    @if $breakpoint == port-tab {
+        @media (max-width: 56.25em) { @content }
+    };
+
+    @if $breakpoint == land-tab {
+        @media (max-width: 75em) { @content }
+    }
+}
